@@ -31,7 +31,7 @@ JavaScript
 
 Ekipi
 
-Bravo 6ix — 8 anëtarë
+Bravo eigh8 — 8 anëtarë
 
 Secili anëtar është duke punuar në pjesë të ndryshme të projektit, me qëllim që në fund të kemi një platformë funksionale dhe të lehtë për përdorim.
 
