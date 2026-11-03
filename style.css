@@ -1,0 +1,160 @@
+:root {
+  color-scheme: dark;
+  --forest: #07180f;
+  --lime: #c5f45b;
+  --white: #f7f8f4;
+  --muted: #a4aaa5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--forest);
+}
+
+.location-page {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 64px clamp(36px, 5.2vw, 88px);
+  background: var(--forest);
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 32px;
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(52px, 5.7vw, 80px);
+  font-weight: 800;
+  line-height: 0.99;
+}
+
+h1 span {
+  color: var(--lime);
+}
+
+.description {
+  max-width: 390px;
+  margin: 28px 0 0;
+  color: #d0d5d0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.legend {
+  display: grid;
+  gap: 14px;
+  margin: 34px 0 0;
+  padding: 0;
+  color: #e2e6e1;
+  font-size: 13px;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.legend-dot {
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend-dot--verified {
+  background: var(--lime);
+}
+
+.legend-dot--owner {
+  background: #858b87;
+}
+
+.map-panel {
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #e8e8e5;
+}
+
+.map-panel iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .location-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .intro {
+    padding: 52px clamp(28px, 8vw, 56px) 48px;
+  }
+
+  .intro-content {
+    max-width: 520px;
+  }
+
+  .eyebrow {
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: clamp(54px, 12vw, 72px);
+  }
+
+  .description {
+    margin-top: 22px;
+  }
+
+  .legend {
+    margin-top: 26px;
+  }
+
+  .map-panel,
+  .map-panel iframe {
+    min-height: 52vh;
+    min-height: 52svh;
+  }
+}
